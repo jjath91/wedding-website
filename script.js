@@ -5,12 +5,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
     console.log('Sending:', { name, guests });
     fetch(this.action, {
         method: 'POST',
-        body: JSON.stringify({ name: name, guests: guests }),
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        mode: 'cors' // Explicitly set CORS mode
+        body: JSON.stringify({ name: name, guests: guests })
     })
     .then(response => {
         console.log('Response status:', response.status);
