@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"
+        <title>Jami and JJ Tie the Knot</title>
+        <!-- Tailwind CSS CDN-->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-slate-100 text-gray-800 font-sans leading-relaxed">
+        <!-- header-->
+         <header class="bg-white shadow-md py-6 text-center">
+            <h1 class="text-4xl text-gray-800 font-bold">JJ and Jami</h1>
+            <nav class="mt-4">
+                <a href="#story" class="mx-4 text-gray-600 font-semibold hover:text-slate-800">Our Story</a>
+                <a href="#details" class="mx-4 text-gray-600 font-semibold hover:text-slate-800">Details</a>
+                <a href="#rsvp" class="mx-4 text-gray-600 font-semibold hover:text-slate-800">rsvp</a>
+                <a href="#gallery" class="mx-4 text-gray-600 font-semibold hover:text-slate-800">Gallery</a>
+            </nav>
+         </header>
+         <!--Our Story-->
+         <section id="story" class="py-12 text-center">
+            <h2 class="text-3xl text-gray-800 mb-6">Our Story</h2>
+            <p class="max-w-xl mx-auto mb-4">We met in April of 2021. A match made in Breckenridge</p>
+         </section>
+         <!--Wedding Details-->
+         <section id="details" class="py-12 text-center">
+            <h2 class="text-3xl text-gray-800 mb-6">Wedding Details</h2>
+            <p class="max-w-xl mx-auto mb-2">Date: TBD</p>
+            <p class="max-w-xl mx-auto mb-2">Time: TBD</p>
+            <p class="max-w-xl mx-auto mb-2">Location: TBD</p>
+         </section>
+         <!--RSVP Form-->
+         <section id="rsvp" class="py-12 text-center">
+            <h2 class="text-3xl text-gray-800 mb-6">RSVP</h2>
+            <form id="rsvp-form" action="https://script.google.com/macros/s/AKfycbwD9xlzSfI8ITvy7XNjcEnDDzIhA7n75wvkoFbNUpR5RG2qS8rTFXSEH6cMlxvq_54/exec" method="POST" class="max-w-md mx-auto flex flex-col">
+                <label for="name" class="text-left mb-2">Name:</label>
+                <input type="text" id="name" name="name" required class="p-2 mb-4 border border-gray-300 rounded">
+                <label for="guests" class="text-left mb-2">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required class="p-2 mb-4 border border-gray-300 roudned">
+                <button type="submit" class="bg-slate-800 text-white py-2 rounded hover:bg-pink-500">Submit</button> 
+            </form>
+         </section>
+         <!--Gallery-->
+         <section id="gallery" class="py-12 text-center">
+            <h2 class="text-3xl text-gray-800 mb-6">Gallery</h2>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <img src="images/photo1.jpg" alt="J&J photo 1" class="w-52 h52 object-cover rounded-lg">
+                <img src="images/photo2.jpg" alt="J&J photo 2" class="w-52 h-52 object-cover rounded-lg">
+                <img src="images/photo3.jpg" alt="J&J photo 3" class="w-52 h52 object-cover rounded-lg">
+            </div>
+         </section>
+         <!--footer-->
+         <footer class="bg-white py-6 text-center mt-12">
+            <p>Text JJ for more info: 678-314-1778</p>
+            <p>Text Jami for more info: 919-809-4502</p>
+            <p>Created by Chicken Productions &#x1F414;</p>
+         </footer>
+         <script src="script.js"></script>
+    </body>
+</html>
