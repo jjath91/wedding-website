@@ -1,3 +1,4 @@
+// Script for RSVP for to send to Google sheets
 document.getElementById('rsvp-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
@@ -25,4 +26,12 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
         console.error('Fetch error:', error);
         alert('Error submitting RSVP: ' + error.message);
     });
+});
+
+//script to theme toggle
+const html = document.documentElement;
+const toggleButton = document.getElementById('theme-toggle');
+toggleButton.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
 });
