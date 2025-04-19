@@ -1,0 +1,32 @@
+<!--rsvp.html-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"
+        <title></title>
+        <!-- Tailwind CSS CDN-->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-white-900 text-white-100 font-sans leading-relaxed">
+        <!-- header-->
+         <header class="bg-white-800 shadow-md py-6 text-center">
+            <h1 class="text-4xl text-green-900 font-bold">Jami and JJ Tie the Knot</h1>
+            <nav class="mt-4">
+                <a href="index.html" class="mx-4 text-white-400 font-semibold hover:text-green-900">Our Story</a>
+                <a href="details.html" class="mx-4 text-white-400 font-semibold hover:text-green-900">Details</a>
+                <a href="index.html" class="mx-4 text-white-400 font-semibold hover:text-green-900">RSVP</a>
+                <a href="index.html" class="mx-4 text-white-400 font-semibold hover:text-green-900">Gallery</a>
+            </nav>
+         </header>
+             <!--RSVP Form-->
+             <section id="rsvp" class="py-12 text-center">
+                <h2 class="text-3xl text-green-900 mb-6">RSVP</h2>
+                <form id="rsvp-form" action="https://script.google.com/macros/s/AKfycbwMYMH6dCuIKqkwAEind81XHdkU3PnDVkmC5e7fLQoXUojmbL79QSG1oPFKnfHoKn9C/exec" method="POST" class="max-w-md mx-auto flex flex-col">
+                    <label for="name" class="text-left mb-2">Name:</label>
+                    <input type="text" id="name" name="name" required class="p-2 mb-4 border border-white-600 rounded bg-white-800 text-white-100">
+                    <label for="guests" class="text-left mb-2">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required class="p-2 mb-4 border border-white-600 rounded bg-white-800 text-white-100">
+                    <button type="submit" class="bg-green-950 text-white py-2 rounded hover:bg-green-950">Submit</button> 
+                </form>
+             </section>
