@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans leading-relaxed dark:bg-gray-900 dark:text-gray-100">
+    <header class="bg-gray-800 shadow-md py-6 text-center dark:bg-gray-800">
+        <h1 class="text-4xl text-pink-400 font-bold dark:text-pink-300">JJ & Jami</h1>
+        <nav class="mt-4">
+            <a href="index.html" class="mx-4 text-gray-400 font-semibold hover:text-pink-400 dark:text-gray-300 dark:hover:text-pink-300">Our Story</a>
+            <a href="details.html" class="mx-4 text-gray-400 font-semibold hover:text-pink-400 dark:text-gray-300 dark:hover:text-pink-300">Details</a>
+            <a href="index.html" class="mx-4 text-gray-400 font-semibold hover:text-pink-400 dark:text-gray-300 dark:hover:text-pink-300">rsvp</a>
+            <a href="index.html" class="mx-4 text-gray-400 font-semibold hover:text-pink-400 dark:text-gray-300 dark:hover:text-pink-300">Gallery</a>
+            <button id ="theme-toggle" class="mx-4 text-gray-400 font-semibold hover:text-pink-400 dark:text-gray-300 dark:hover:text-pink-300">Toggle Theme</button>
+        </nav>
+    </header>
+     <!--Wedding Details-->
+     <section id="details" class="py-12 text-center">
+        <h2 class="text-3xl text-pink-400 mb-6 dark:text-pink-300">Wedding Details</h2>
+        <p class="max-w-xl mx-auto mb-2">Date: TBD</p>
+        <p class="max-w-xl mx-auto mb-2">Time: TBD</p>
+        <p class="max-w-xl mx-auto mb-2">Location: TBD</p>
+     </section>
+     <footer class="bg-gray-800 py-6 text-center mt-12 dark:bg-gray-800">
+        <p>Contact us at: chickenandegg2026@gmail.com <span class="text-2xl text-yellow-500"></span></p>
+        <p>Created by Chicken Productions &#x1F414;</p>
+     </footer>
+     <script>
+        if (localStorage.getItem('theme') === 'dark' || !localStorage.getItem('theme')) {
+           document.documentElement.classList.add('dark');
+        }
+     </script>
