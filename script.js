@@ -1,12 +1,12 @@
-// Script for RSVP for to send to Google sheets
 document.getElementById('rsvp-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    const name = document.getElementById('name').value;
+    const name = encodeURIComponent(document.getElementById('name').value);
     const guests = document.getElementById('guests').value;
     console.log('Sending:', { name, guests });
     fetch(this.action, {
         method: 'POST',
-        body: JSON.stringify({ name: name, guests: guests })
+        body: JSON.stringify({ name: name, guests: guests }),
+        headers: { 'Content-Type': 'application/json' }
     })
     .then(response => {
         console.log('Response status:', response.status);
@@ -16,7 +16,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
     .then(data => {
         console.log('Response data:', data);
         if (data.status === 'success') {
-            alert(`Thank you, ${name}! We've recorded your RSVP for ${guests} guest${guests == 1 ? '' : 's'}.`);
+            alert(`Thank you, ${decodeURIComponent(name)}! We've recorded your RSVP for ${guests} guest${guests == 1 ? '' : 's'}.`);
             this.reset();
         } else {
             alert('Oops, something went wrong. Response: ' + JSON.stringify(data));
@@ -27,4 +27,3 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
         alert('Error submitting RSVP: ' + error.message);
     });
 });
-
